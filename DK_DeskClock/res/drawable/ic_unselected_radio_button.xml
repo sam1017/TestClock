@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/selete_circle_diameter"
+    android:height="@dimen/selete_circle_diameter"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <!--    <path
+            android:fillColor="@android:color/holo_blue_dark"
+            android:pathData="M0,0 L0,44 L44,44 L44,0 Z"/>-->
+    <group
+        android:scaleY="0.5"
+        android:scaleX="0.5"
+        android:pivotY="22"
+        android:pivotX="22">
+        <path android:fillAlpha="0.08" android:fillColor="#000"
+            android:pathData="m22 2.01c11.05 0 20 8.95 20 20c0 11.04 -8.95 20 -20 20c-11.05 0 -20 -8.95 -20 -20c0 -11.04 8.95 -20 20 -20z"/>
+        <path android:fillColor="#ddd" android:pathData="m22 3.01c10.49 0 19 8.51 19 19c0 10.49 -8.51 19 -19 19c-10.49 0 -19 -8.51 -19 -19c0 -10.49 8.51 -19 19 -19zm-0 -3c-12.15 0 -22 9.85 -22 22c0 12.15 9.85 22 22 22c12.15 0 22 -9.85 22 -22c0 -12.15 -9.85 -22 -22 -22z"/>
+    </group>
+</vector>
+

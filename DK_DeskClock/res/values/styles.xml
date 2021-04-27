@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="no_alarms">
+        <item name="android:textSize">@dimen/no_alarm_font_size</item>
+        <item name="android:textColor">@color/white_63p</item>
+    </style>
+
+    <style name="widget_medium_thin">
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:shadowRadius">@dimen/widget_shadow_radius</item>
+        <item name="android:shadowColor">@color/widget_shadow_color</item>
+        <item name="android:shadowDy">@dimen/widget_shadow_dy</item>
+    </style>
+
+    <style name="label">
+        <item name="android:textSize">@dimen/label_font_size</item>
+    </style>
+
+    <style name="widget_label" parent="label">
+       <!-- <item name="android:shadowRadius">@dimen/widget_shadow_radius</item>
+        <item name="android:shadowColor">@color/widget_shadow_color</item>
+        <item name="android:shadowDy">@dimen/widget_shadow_dy</item> -->
+    </style>
+
+    <style name="display_time">
+        <item name="android:textSize">56sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFeatureSettings" tools:targetApi="21">tnum</item>
+    </style>
+
+    <style name="world_clock_time">
+        <!--<item name="android:textSize">48sp</item>-->
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!--bv zhangjiachu modify for alarm style 20200107 start-->
+    <!--<style name="body">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>-->
+    <style name="body">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--bv zhangjiachu modify for alarm style 20200107 start-->
+
+    <style name="big_thin">
+        <item name="android:textSize">@dimen/big_font_size</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="alarm_lockscreen_thin">
+        <item name="android:textSize">@dimen/alarm_info_font_size</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="widget_big_thin" parent="big_thin">
+       <!-- <item name="android:shadowRadius">@dimen/widget_shadow_radius</item>
+        <item name="android:shadowColor">@color/widget_shadow_color</item>
+        <item name="android:shadowDy">@dimen/widget_shadow_dy</item> -->
+    </style>
+
+    <style name="bv_widget_big_light">
+        <item name="android:textSize">@dimen/big_font_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="alarm_label">
+        <item name="android:textSize">@dimen/alarm_label_size</item>
+    </style>
+
+    <style name="alarm_label_bold" parent="alarm_label">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PrimaryLabelTextParentAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/label_text_size</item>
+    </style>
+
+    <style name="PrimaryLabelTextAppearance" parent="PrimaryLabelTextParentAppearance" />
+
+    <style name="SecondaryLabelTextParentAppearance">
+        <item name="android:textColor">@color/white_63p</item>
+        <item name="android:textSize">@dimen/label_text_size</item>
+    </style>
+
+    <style name="SecondaryLabelTextAppearance" parent="SecondaryLabelTextParentAppearance" />
+
+    <style name="TextAppearance.Tab" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@null</item>
+
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="displayOptions">showTitle|homeAsUp</item>
+    </style>
+
+    <style name="Widget.ActionBar.NoTitle">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="displayOptions">homeAsUp</item>
+    </style>
+
+    <!--bv zhangjiachu modify for alarm style : textSize">36sp to 16sp
+    modify : android:fontFamily">sans-serif-light to oppo-sans-m-->
+    <style name="Widget.Button.TimerSetupDigit" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:fontFamily">oppo-sans-m</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Widget.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="Widget.TimePicker" parent="android:Widget.Material.TimePicker"
+        tools:targetApi="21">
+        <item name="android:headerBackground">@android:color/transparent</item>
+        <item name="android:numbersBackgroundColor">@android:color/transparent</item>
+        <item name="android:numbersSelectorColor">?attr/colorAccent</item>
+        <item name="android:numbersTextColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <!--bv zhangjiachu add for alarm style-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/custom_checkbox_selector</item>
+    </style>
+
+    <style name="Theme.TimePicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:editTextStyle">@style/Widget.AppCompat.EditText.Yellow</item>
+    </style>
+    <!--bv zhangjiachu add for alarm style 20200107 start-->
+    <style name="Widget.AppCompat.EditText.Yellow">
+        <item name="android:textSize">@dimen/header_font_size</item>
+        <item name="android:textColor">@color/hct_Accent_color</item>
+    </style>
+
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialog.AnimationStyle</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="BottomDialog.AnimationStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <style name="bv_display_time">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/bv_text_color</item>
+        <item name="android:fontFamily">oppo-sans-r</item>
+        <item name="android:fontFeatureSettings" tools:targetApi="21">tnum</item>
+    </style>
+
+    <style name="bv_world_clock_time">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/bv_text_color</item>
+        <item name="android:fontFamily">oppo-sans-r</item>
+    </style>
+
+    <style name="bv_world_clock_city_text">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/bv_text_color</item>
+    </style>
+
+    <style name="bvSecondaryLabelTextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/bv_second_text_color</item>
+    </style>
+    <!--PrimaryLabelTextAppearance-->
+
+    <style name="bvPrimaryLabelTextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bv_text_color</item>
+    </style>
+
+    <style name="Theme.picker" parent="android:Theme.Holo.NoActionBar">
+        <item name="android:editTextStyle">@style/Widget.EditText.Yellow</item>
+    </style>
+
+    <style name="Widget.EditText.Yellow" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/hct_Accent_color</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <!--bv zhangjiachu add for alarm style 20200107 end-->
+
+    <!--bv zhangjiachu add for alarm style 20200229 start-->
+    <style name="BV_TextAppearance.Tab" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--bv zhangjiachu add for alarm seekbar style 20200722-->
+    <style name="alarm_seekbar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressDrawable">@drawable/bv_seek_bar</item>
+        <item name="android:thumb">@drawable/bv_seekbar_thumb</item>
+        <item name="android:maxHeight">1.5dp</item>
+        <item name="android:minHeight">1.5dp</item>
+    </style>
+
+    <style name="BvActionOverflowButtonStyle" parent="@android:style/Widget.Material.Light.ActionButton.Overflow" tools:targetApi="21">
+        <item name="android:src">@drawable/bv_ic_more_point</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="BvActionOverflowMenuStyle" parent="@android:style/Widget.Material.Light.PopupMenu.Overflow" tools:targetApi="21">
+        <item name="android:popupBackground">@drawable/bv_ic_menu_popup_background</item>
+        <item name="android:popupElevation">2dp</item>
+        <item name="android:dropDownHorizontalOffset">-16dp</item>
+        <item name="android:dropDownWidth">110dp</item>
+    </style>
+
+    <!--bv zhangjiachu add for bv alarm style BvPreferenceTheme 20200815 start-->
+    <style name="BvPreferenceTheme" parent="PreferenceThemeOverlay.v14.Material">
+        <item name="preferenceCategoryStyle">@style/BvPrerenceCategoty</item>
+        <!--<item name="preferenceFragmentStyle">@style/BvPreferenceFragment</item>-->
+        <item name="preferenceFragmentListStyle">@style/BvPreferenceFragmentList</item>
+        <item name="preferenceStyle">@style/BvPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/BvSwitchPreferenceCompat</item>
+        <!--<item name="preferenceInformationStyle">@style/BvPreferenceInformation</item>-->
+        <item name="dialogPreferenceStyle">@style/BvPreferenceDialogPreference</item>
+        <item name="preferenceFragmentCompatStyle">@style/BvPreferenceFragmentCompat</item>
+        <item name="dropdownPreferenceStyle">@style/bvDropdownPreference</item>
+    </style>
+
+    <style name="bvDropdownPreference" parent="Preference.DropDown">
+        <item name="android:layout">@layout/bv_preference_dropdown_material</item>
+    </style>
+
+    <style name="BvPreferenceDialogPreference" parent="Preference.DialogPreference.Material">
+        <item name="android:layout">@layout/bv_preference_material</item>
+    </style>
+
+    <style name="BvPreferenceInformation" parent="Preference.Information.Material">
+        <item name="android:layout">@layout/bv_preference_information_material</item>
+        <item name="android:enabled">false</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+
+    <style name="BvPreference" parent="Preference.Material">
+        <item name="android:layout">@layout/bv_preference_material</item>
+    </style>
+
+    <style name="BvSwitchPreferenceCompat" parent="Preference.SwitchPreferenceCompat.Material">
+        <item name="android:layout">@layout/bv_switch_preference_material</item>
+        <item name="widgetLayout">@layout/bv_preference_widget_switch_compat</item>
+    </style>
+
+    <style name="BvPreferenceFragmentCompat" parent="PreferenceFragment.Material">
+        <item name="android:divider">@drawable/bv_preference_list_divider_material</item>
+        <item name="android:dividerHeight">0px</item>
+    </style>
+
+    <style name="BvPrerenceCategoty" parent="Preference.Category.Material">
+        <item name="android:layout">@layout/bv_preference_category_divider</item>
+    </style>
+
+    <style name="BvPreferenceFragmentList" parent="PreferenceFragmentList.Material">
+        <item name="android:paddingLeft">22dp</item>
+        <item name="android:paddingRight">22dp</item>
+    </style>
+
+    <style name="Bv_Preference_TextAppearanceMaterialBody2">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/bv_category_title_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BvSwitchCompatStyle">
+        <item name="track">@drawable/track</item>
+        <item name="android:thumb">@drawable/thumb</item>
+    </style>
+
+    <style name="dialog_edit_content">
+        <item name="android:paddingStart">11dip</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+        <item name="android:textColorHint">?android:attr/textColorSecondary</item>
+        <item name="android:background">@drawable/bv_dialog_edit_background</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--bv zhangjiachu add for bv alarm style BvPreferenceTheme 20200815 end-->
+
+    <style name="bv_digital_clock_large">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/bv_digital_clock_large_text_color</item>
+        <item name="android:fontFamily">oppo-sans-l</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+    </style>
+
+    <style name="stopwatch_display_time">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bv_text_color</item>
+        <item name="android:fontFamily">oppo-sans-m</item>
+        <item name="android:fontFeatureSettings" tools:targetApi="21">tnum</item>
+    </style>
+</resources>

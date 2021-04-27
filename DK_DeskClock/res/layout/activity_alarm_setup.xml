@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_edit"
+    android:fitsSystemWindows="true"
+    app:statusBarBackground="@null"
+    android:orientation="vertical"
+    android:background="@color/bv_windowBackground"
+    tools:context=".AlarmSetupActivity">
+
+    <LinearLayout
+        android:id="@+id/add_alarm_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bv_alarm_title_bar"
+        android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/cancel_save"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bv_alarm_title_bar"
+                android:layout_marginLeft="22dp"
+                android:text="@android:string/cancel"
+                android:textColor="@color/hct_Accent_color"
+                android:gravity="start|center_vertical"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                style="@style/alarm_label_bold"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/add_alarm_title"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bv_alarm_title_bar"
+                android:hint="@string/button_alarms"
+                android:gravity="center"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                style="@style/alarm_label_bold"
+                android:textColor="@color/bv_text_color"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/ok_save"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bv_alarm_title_bar"
+                android:layout_marginRight="22dp"
+                android:text="@string/save"
+                android:textColor="@color/hct_Accent_color"
+                android:gravity="end|center_vertical"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                style="@style/alarm_label_bold"
+                android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="3dp"
+        android:layout_below="@+id/add_alarm_title_bar"
+        android:background="@color/bv_windowBackground">
+
+        <com.android.deskclock.alarms.NumberPickerView
+            android:id="@+id/picker_half_day"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:contentDescription="picker_half_day"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_ShownCount="5"
+            app:npv_TextArray="@array/half_day"
+            app:npv_TextSizeSmall="18sp"
+            app:npv_TextColorSmall="#a2a2a2"
+            app:npv_TextSizeNormal="20sp"
+            app:npv_TextColorNormal="#a2a2a2"
+            app:npv_TextSizeSelected="24sp"
+            app:npv_TextColorSelected="#fe772a"
+            app:npv_WrapSelectorWheel="false"
+            app:npv_DividerColor="@color/transparent"
+            android:visibility="gone"/>
+
+        <!--app:npv_HintText="@string/hour_hint"-->
+        <com.android.deskclock.alarms.NumberPickerView
+            android:id="@+id/picker_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="picker_hour"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_RespondChangeInMainThread="false"
+            app:npv_ShownCount="5"
+            app:npv_TextArray="@array/hour_display"
+            app:npv_TextSizeSmall="18sp"
+            app:npv_TextColorSmall="#a2a2a2"
+            app:npv_TextSizeNormal="20sp"
+            app:npv_TextColorNormal="#a2a2a2"
+            app:npv_TextSizeSelected="24sp"
+            app:npv_TextColorSelected="#fe772a"
+            app:npv_WrapSelectorWheel="true"
+            app:npv_DividerColor="@color/transparent" />
+
+        <!--app:npv_HintText="@string/minute_hint"-->
+        <com.android.deskclock.alarms.NumberPickerView
+            android:id="@+id/picker_minute"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="picker_minute"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_ShownCount="5"
+            app:npv_TextArray="@array/minute_display"
+            app:npv_TextSizeSmall="18sp"
+            app:npv_TextColorSmall="#a2a2a2"
+            app:npv_TextSizeNormal="20sp"
+            app:npv_TextColorNormal="#a2a2a2"
+            app:npv_TextSizeSelected="24sp"
+            app:npv_TextColorSelected="#fe772a"
+            app:npv_WrapSelectorWheel="true"
+            app:npv_DividerColor="@color/transparent"
+            />
+
+        <!--app:npv_HintText="@string/hour_hint"-->
+        <com.android.deskclock.alarms.NumberPickerView
+            android:id="@+id/picker_24hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="picker_hour"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_RespondChangeInMainThread="false"
+            app:npv_ShownCount="5"
+            app:npv_TextArray="@array/xhour_display"
+            app:npv_TextSizeSmall="18sp"
+            app:npv_TextColorSmall="#a2a2a2"
+            app:npv_TextSizeNormal="20sp"
+            app:npv_TextColorNormal="#a2a2a2"
+            app:npv_TextSizeSelected="24sp"
+            app:npv_TextColorSelected="#fe772a"
+            app:npv_WrapSelectorWheel="true"
+            app:npv_DividerColor="@color/transparent"
+            android:visibility="gone"
+            />
+
+        <Space
+            android:id="@+id/space_24hour"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <!--app:npv_HintText="@string/minute_hint"-->
+        <com.android.deskclock.alarms.NumberPickerView
+            android:id="@+id/picker_minute_24hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="picker_minute"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_ShownCount="5"
+            app:npv_TextArray="@array/minute_display"
+            app:npv_TextSizeSmall="18sp"
+            app:npv_TextColorSmall="#a2a2a2"
+            app:npv_TextSizeNormal="20sp"
+            app:npv_TextColorNormal="#a2a2a2"
+            app:npv_TextSizeSelected="24sp"
+            app:npv_TextColorSelected="#fe772a"
+            app:npv_WrapSelectorWheel="true"
+            app:npv_DividerColor="@color/transparent"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <!--bv zhangjiachu 增加遮罩效果 20200810 start-->
+    <ImageView
+        android:id="@+id/gradient_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/time_picker"
+        android:src="@drawable/bv_gredient_top"/>
+
+    <ImageView
+        android:id="@+id/gradient_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/time_picker"
+        android:src="@drawable/bv_gredient_bottom"/>
+    <!--bv zhangjiachu 增加遮罩效果 20200810 end-->
+
+    <View
+        android:id="@+id/setup_div"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/time_picker"
+        android:background="@color/bv_div_color" />/>
+
+    <LinearLayout
+        android:id="@+id/repeat_days_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alarm_setup_item_hight"
+        android:layout_below="@+id/setup_div"
+        android:orientation="horizontal"
+        android:layout_marginTop="16.5dp">
+            <TextView
+                android:id="@+id/repeat_days_title"
+                style="@style/body"
+                android:textSize="15sp"
+                android:textColor="@color/bv_text_color"
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="22dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:text="@string/alarm_repeat" />
+
+            <LinearLayout
+                android:id="@+id/repeat_days"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-4.5dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="7dp"
+                android:orientation="horizontal"
+                app:layout_gravity="fill_horizontal"
+                android:gravity="center_vertical"
+                />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ring_lab"
+        style="@style/body"
+        android:textSize="15sp"
+        android:textColor="@color/bv_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/alarm_setup_item_hight"
+        android:text="@string/ringtone_description"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/repeat_days_tab"
+        android:layout_marginLeft="22dp"/>
+
+    <TextView
+        android:id="@+id/vibrate_lab"
+        style="@style/body"
+        android:textSize="15sp"
+        android:textColor="@color/bv_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/alarm_setup_item_hight"
+        android:text="@string/alarm_vibrate"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/ring_lab"
+        android:layout_marginLeft="22dp" />
+
+    <!--bv zhangjiachu del android:drawablePadding="@dimen/alarm_horizontal_padding"-->
+    <TextView
+        style="@style/body"
+        android:textColor="@color/bv_second_text_color"
+        android:id="@+id/choose_ringtone"
+        android:paddingBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alarm_setup_item_hight"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingEnd="@dimen/icon_margin"
+        android:paddingStart="@dimen/icon_margin"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textAlignment="textEnd"
+        android:gravity="end|center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf ="@+id/ring_lab"
+        android:layout_marginRight="12dp"
+        android:layout_below="@+id/repeat_days_tab" />
+
+    <Switch
+        android:id="@+id/vibrate_onoff"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/alarm_setup_item_hight"
+        android:minHeight="@dimen/touch_target_min_size"
+        android:minWidth="@dimen/touch_target_min_size"
+        android:switchMinWidth="24dp"
+        android:thumb="@drawable/thumb"
+        android:track="@drawable/track"
+        app:layout_gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="23dp"
+        android:layout_below="@+id/choose_ringtone"
+        />
+    <!--// bv zhangjiachu add for debug bug id : 250 2020-03-03 start-->
+    <LinearLayout
+        android:id="@+id/edit_label_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alarm_setup_item_hight"
+        android:layout_below="@+id/vibrate_lab"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/edit_label_lab"
+            style="@style/body"
+            android:textSize="15sp"
+            android:textColor="@color/bv_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/edit_label"
+            style="@style/body"
+            android:paddingBottom="1dp"
+            android:textColor="@color/bv_second_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingEnd="@dimen/icon_margin"
+            android:paddingStart="@dimen/icon_margin"
+            android:singleLine="true"
+            android:gravity="end|center_vertical"
+            android:textAlignment="viewEnd"
+            app:layout_gravity="fill_horizontal"
+            android:layout_alignParentRight="true" />
+
+    </LinearLayout>
+    <!--// bv zhangjiachu add for debug bug id : 250 2020-03-03 end-->
+
+</RelativeLayout>

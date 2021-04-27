@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/select_div"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/bv_div_color"
+        android:visibility="gone"/>
+    <!--bv zhangjiachu add for unselected_cities_title 20200302 start-->
+    <!--android:minHeight="49dp"-->
+    <TextView
+        android:id="@+id/unselected_cities_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/hct_Accent_color"
+        android:paddingStart="21dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="6dp"
+        android:visibility="gone" />
+    <!--bv zhangjiachu add for unselected_cities_title 20200302 end-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/cities_list_item_height"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/index"
+                android:layout_width="74dip"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/label_text_size"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+            <!--bv zhangjiachu delete for alarm style 20191231 start-->
+            <!--<CheckBox
+                android:id="@+id/city_onoff"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:clickable="false" />-->
+            <!--bv zhangjiachu delete for alarm style 20191231 start-->
+            <!--bv zhangjiachu add for alarm style 20191231 start-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="-1dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="21dip"
+                    android:paddingEnd="10dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textAppearance="@style/PrimaryLabelTextAppearance"
+                    android:textColor="@color/bv_text_color" />
+
+                <!--android:textAppearance="@style/PrimaryLabelTextAppearance"-->
+                <TextView
+                    android:id="@+id/time_zone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="21dip"
+                    android:paddingEnd="10dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="13sp"
+                    android:textColor="@color/bv_second_text_color"/>
+
+            </LinearLayout>
+            <!--bv zhangjiachu add for alarm style 20191231 end-->
+            <!--bv zhangjiachu modify android:layout_marginEnd="8dip" to 10dip
+             android:textAppearance="@style/SecondaryLabelTextAppearance"-->
+            <TextView
+                android:id="@+id/city_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dip"
+                android:textSize="13sp"
+                android:textColor="@color/bv_second_text_color"/>
+            <!--bv zhangjiachu add for alarm style 20191231 start-->
+            <CheckBox
+                android:id="@+id/city_onoff"
+                style="@style/CustomCheckboxTheme"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:clickable="false"
+                android:layout_marginEnd="18dp"/>
+            <!--bv zhangjiachu add for alarm style 20191231 end-->
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

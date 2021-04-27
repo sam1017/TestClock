@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:statusBarBackground="@null">
+
+    <!--bv zhangjiachu modify android:layout_height="wrap_content" to bv_alarm_title_bar 20200227-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bv_alarm_title_bar"
+        android:background="@null"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetStart="0dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/bv_deskclock_title"
+                android:textSize="16sp"
+                android:textColor="@color/colorTabAlarms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                />
+
+            <!--bv zhangjiachu add for alarm style 20200109 start-->
+            <LinearLayout
+                android:id="@+id/delete_alarm_tab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/cancel_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bv_alarm_title_bar"
+                    android:text="@android:string/cancel"
+                    android:textColor="@color/hct_Accent_color"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="22dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    style="@style/alarm_label_bold"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/select_num"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bv_alarm_title_bar"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    style="@style/alarm_label_bold"
+                    android:layout_weight="1"/>
+                <!--style="@style/alarm_label_bold"-->
+                <TextView
+                    android:id="@+id/select_all"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bv_alarm_title_bar"
+                    android:text="@android:string/selectAll"
+                    android:textColor="@color/hct_Accent_color"
+                    android:gravity="end|center_vertical"
+                    android:paddingEnd="22dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    style="@style/alarm_label_bold"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!--bv zhangjiachu add for alarm style 20200109 end-->
+
+            <!--bv zhangjiachu add android:layout_marginLeft="26dp" for alarm style 20200109 start
+            app:tabMode="fixed" to scrollable
+            del app:tabGravity="fill"
+            bv zhangjiachu del for TabAlarms text color 20200604
+            delete:app:tabTextColor="@color/tab_alarms"
+            app:tabSelectedTextColor="@color/hct_Accent_color"-->
+            <!--<android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabMaxWidth="0dp"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="0dp"
+                app:tabPaddingStart="0dp"
+                android:layout_marginLeft="30dp"/>-->
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:id="@+id/tab_hairline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hairline_height"
+            android:layout_gravity="bottom"
+            android:background="@color/hairline"
+            android:importantForAccessibility="no" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/desk_clock_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:saveEnabled="false" />
+
+        <include layout="@layout/drop_shadow" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_behavior="com.android.deskclock.widget.toast.SnackbarSlidingBehavior">
+
+            <!--bv zhangjiachu add for alarm style 20200108 start-->
+
+            <LinearLayout
+                android:id="@+id/delete_buttom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/bv_div_color" />-->
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/hct_line_color"/>-->
+
+                <TextView
+                    android:id="@+id/delete_buttom"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/bv_delete_buttom_width"
+                    android:minHeight="@dimen/bv_delete_buttom_width"
+                    android:text="@string/delete"
+                    android:drawableTop="@drawable/ic_bv_delete"
+                    android:includeFontPadding="false"
+                    android:drawableTint="@color/white"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_Accent_color"
+                    android:layout_marginBottom="@dimen/fab_margin"
+                    />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1">
+
+                <!--bv zhangjiachu modify for alarm style 20200103 start-->
+                <!--<Button
+                    android:id="@+id/left_button"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside" />-->
+
+                <ImageButton
+                    android:id="@+id/left_button"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1.5dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside" />
+                <!--bv zhangjiachu modify for alarm style 20200103 end-->
+
+            </FrameLayout>
+
+            <!--bv zhangjiachu modify app:elevation="@dimen/fab_elevation" to bv_fab_elevation for alarm style
+            layout_height="wrap_content" to 60dp-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin"
+                app:borderWidth="0dp"
+                app:elevation="@dimen/bv_fab_elevation" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/right_button"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1.5dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/hairline"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dcdcdc" />
+
+        <LinearLayout
+            android:id="@+id/tabs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabs_layout_height"
+            android:background="@color/bv_windowBackground">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="0dp"
+                app:tabPaddingStart="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

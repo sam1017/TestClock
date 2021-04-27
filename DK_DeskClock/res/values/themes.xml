@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.DeskClock" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackgroundFloating" tools:targetApi="23">
+            ?attr/colorBackgroundFloating
+        </item>
+        <!--<item name="android:navigationBarColor" tools:targetApi="21">?attr/colorPrimaryDark</item>-->
+        <item name="android:statusBarColor" tools:targetApi="21">@color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/transparent</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+        <item name="android:popupTheme" tools:targetApi="21">?attr/popupTheme</item>
+        <item name="android:timePickerStyle" tools:targetApi="21">@style/Widget.TimePicker</item>
+        <item name="android:windowBackground">@color/bv_windowBackground</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="colorAccent">#FE772A</item>
+        <item name="colorBackgroundFloating">#f6f6f6</item>
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="colorPrimaryDark">#66000000</item>
+        <item name="imageButtonStyle">@style/Widget.ImageButton</item>
+        <item name="popupTheme">@style/ThemeOverlay.Popup</item>
+        <item name="android:actionOverflowButtonStyle">@style/BvActionOverflowButtonStyle</item>
+        <item name="actionOverflowMenuStyle">@style/BvActionOverflowMenuStyle</item>
+    </style>
+
+    <!--//hct-fangkou modify for support NightMode 20191211 start-->
+    <style name="ThemeDarkDeskClock" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackgroundFloating" tools:targetApi="23">
+            ?attr/colorBackgroundFloating
+        </item>
+        <item name="android:navigationBarColor" tools:targetApi="21">?attr/colorPrimaryDark</item>
+        <item name="android:popupTheme" tools:targetApi="21">?attr/popupTheme</item>
+        <item name="android:timePickerStyle" tools:targetApi="21">@style/Widget.TimePicker</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="colorAccent">#FE772A</item>
+        <item name="colorBackgroundFloating">#303030</item>
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="colorPrimaryDark">#66000000</item>
+        <item name="imageButtonStyle">@style/Widget.ImageButton</item>
+        <item name="popupTheme">@style/ThemeOverlay.Popup</item>
+        <item name="android:actionOverflowButtonStyle">@style/BvActionOverflowButtonStyle</item>
+        <item name="actionOverflowMenuStyle">@style/BvActionOverflowMenuStyle</item>
+    </style>
+    <!--//hct-fangkou modify for support NightMode 20191211 end-->
+
+    <style name="Theme.DeskClock.Settings">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="actionBarStyle">@style/Widget.ActionBar</item>
+        <item name="colorControlActivated">?attr/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Attributes from android.support.v7.preference -->
+        <!--<item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>-->
+        <item name="android:listPreferredItemPaddingStart">22dp</item>
+        <item name="android:listPreferredItemPaddingEnd">22dp</item>
+        <item name="preferenceTheme">@style/BvPreferenceTheme</item>
+        <item name="colorAccent">#3478F6</item>
+    </style>
+
+    <style name="Theme.DeskClock.RingtonePicker">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="actionBarStyle">@style/Widget.ActionBar</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.toolbar" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:actionOverflowButtonStyle">@style/BvActionOverflowButtonStyle</item>
+        <!--<item name="android:searchViewStyle" tools:targetApi="21">@style/BvSearchView</item>-->
+        <item name="actionOverflowMenuStyle">@style/BvActionOverflowMenuStyle</item>
+    </style>
+
+    <style name="Theme.DeskClock.CitySelection">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <!--<item name="actionBarStyle">@style/Widget.ActionBar.NoTitle</item>-->
+        <item name="actionBarStyle">@style/Widget.ActionBar</item>
+        <!--<item name="toolbarStyle">@style/Widget.ActionBar</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemeOverlay.Control.Accent" parent="ThemeOverlay.AppCompat">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="colorControlActivated">?attr/colorAccent</item>
+    </style>
+
+    <style name="ThemeOverlay.Popup" parent="ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">?attr/colorBackgroundFloating</item>
+    </style>
+
+    <!-- add "android:windowIsTranslucent" by wangshuoshuo for hide blue screen when enter setting menu -->
+    <style name="HctThemeDeskClock" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackgroundFloating" tools:targetApi="23">
+            ?attr/colorBackgroundFloating
+        </item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/transparent</item>
+        <item name="android:popupTheme" tools:targetApi="21">?attr/popupTheme</item>
+        <item name="android:timePickerStyle" tools:targetApi="21">@style/Widget.TimePicker</item>
+        <item name="android:windowBackground">@color/hct_default_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- bv zhangjiachu 设置statusBarColor 为透明 add for fixbug: 1381 20200706 start-->
+        <item name="android:statusBarColor" tools:targetApi="21">@android:color/transparent</item>
+        <!-- bv zhangjiachu 设置statusBarColor 为透明 add for fixbug: 1381 20200706 end-->
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="colorAccent">#FE772A</item>
+        <item name="colorBackgroundFloating">#f6f6f6</item>
+        <item name="colorControlActivated">#66000000</item>
+        <item name="colorControlNormal">#000000</item>
+        <item name="colorPrimaryDark">#66000000</item>
+        <item name="imageButtonStyle">@style/Widget.ImageButton</item>
+        <item name="popupTheme">@style/ThemeOverlay.Popup</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:timePickerDialogTheme">@style/HcttimePickerDialogTheme</item>-->
+        <item name="android:timePickerDialogTheme">@style/BvtimePickerDialogTheme</item>
+        <item name="android:actionOverflowButtonStyle">@style/BvActionOverflowButtonStyle</item>
+        <item name="actionOverflowMenuStyle">@style/BvActionOverflowMenuStyle</item>
+    </style>
+
+    <!--bv zhangjiachu modify for alarm style 20200102 start-->
+    <style name="BvtimePickerDialogTheme" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="colorAccent">#FE772A</item> <!-- colorAccent here seems to work just fine? -->
+        <item name="android:timePickerStyle">@style/TimePickerDialogStyle</item>
+    </style>
+
+    <style name="TimePickerDialogStyle" parent="@android:style/Widget.Material.Light.TimePicker">
+
+        <item name="colorAccent">#FE772A</item> <!-- colorAccent here seems to work just fine? -->
+
+        <item name="android:timePickerMode">clock</item>
+        <item name="android:headerBackground">#f0f0f0</item>
+        <item name="android:headerTimeTextAppearance">@style/TextAppearance.TimePickerDialogStyle.TimeLabel</item> <!-- TimePicker Time *TextAppearance* -->
+        <item name="android:numbersTextColor">#595959</item>
+        <item name="android:numbersSelectorColor">#ffFE772A</item>
+        <item name="android:numbersBackgroundColor">#f0f0f0</item>
+    </style>
+
+    <style name="TextAppearance.TimePickerDialogStyle.TimeLabel" parent="@android:style/TextAppearance.Material">
+        <item name="android:textSize">60sp</item> <!-- from -->
+        <item name="android:textColor">#ffFE772A</item>
+        <item name="android:textColorSecondary">#ff000000</item>
+    </style>
+    <!--bv zhangjiachu modify for alarm style 20200102 end-->
+    <style name="HcttimePickerDialogTheme" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">#009ACD</item>
+    </style>
+
+    <style name="HctThemeDeskClockRingtonePicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="actionBarStyle">@style/Widget.ActionBar</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="HctThemeDeskClockCitySelection" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="actionBarStyle">@style/Widget.ActionBar.NoTitle</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="HctAlarmActivityStyle" parent="HctThemeDeskClock">
+        <!-- Attributes from android.support.v7.appcompat -->
+        <item name="android:windowBackground">#696969</item>
+    </style>
+    <!--hct-fankou add DeskClock LightTheme 20191113 end-->
+
+</resources>

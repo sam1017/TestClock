@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="black_87p">#DE000000</color>
+    <color name="black_54p">#8A000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_08p">#14FFFFFF</color>
+    <color name="white_63p">#A0FFFFFF</color>
+    <color name="no_alarms">#898989</color>
+    <color name="tab_alarms">#898989</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="hairline">#28FFFFFF</color>
+
+    <color name="clock_gray">#B3FFFFFF</color>
+
+    <color name="default_background">#1A237E</color>
+
+    <!-- shadowColor for widget text -->
+    <color name="widget_shadow_color">#67000000</color>
+    <!--hct-fankou add DeskClock LightTheme 20191113 start-->
+    <!--<color name="hct_default_background">#eeeeee</color>
+    <color name="hct_default_actionbar_background">#ededed</color>
+    <color name="hct_text_color">#0D0D0D</color>
+    <color name="hct_line_color">#DBDBDB</color>
+    <color name="hct_Accent_color">#009ACD</color>-->
+    <!--hct-fankou add DeskClock LightTheme 20191113 end-->
+
+    <!--bv zhangjiachu add for alarm style 20191231 start-->
+    <color name="hct_default_background">#f6f6f6</color>
+    <color name="hct_default_actionbar_background">#f6f6f6</color>
+    <color name="hct_text_color">#252525</color>
+    <color name="no_control_text_color">#818181</color>
+    <color name="hct_line_color">#eaeaea</color>
+    <color name="hct_Accent_color">#FE772A</color>
+
+    <color name="bv_div_color">#dcdcdc</color>
+    <color name="bv_unselect_color">#40252525</color>
+    <!--bv zhangjiachu add for alarm style 20191231 end-->
+
+    <!--bv zhangjiachu add for alarm style 20200519 start-->
+    <color name="colorTrackOff">#D8D8D8</color>
+    <!--bv zhangjiachu add for alarm style 20200519 end-->
+    <!--bv zhangjiachu modify for TabAlarms text color 20200604 start-->
+    <color name="colorTabAlarms">#1e1e1e</color>
+    <!--bv zhangjiachu modify for TabAlarms text color 20200604 end-->
+
+    <!--bv zhangjiachu add for bv theme style start-->
+    <color name="bv_windowBackground">#f6f6f6</color>
+    <color name="bv_text_color">#212121</color>
+    <color name="bv_second_text_color">#818181</color>
+    <color name="bv_category_title_color">#818181</color>
+    <color name="gredient_start_color">#f6f6f6</color>
+    <color name="gredient_end_color">#00f6f6f6</color>
+    <color name="menu_backgound_color">#fafafa</color>
+    <color name="circle_gray_color">#66646464</color>
+    <color name="circle_light_color">#212121</color>
+    <color name="bv_add_24dp_color">#828282</color>
+    <color name="track_on_color">#2762d0</color>
+    <color name="bv_rings_color">#858585</color>
+    <color name="bv_dialog_edit_text_background_color">#EEEEEE</color>
+    <color name="alarm_activity_backgound">#696969</color>
+    <color name="colorTabAlarmsTitle">#bcbcbc</color>
+    <color name="bv_digital_clock_large_text_color">#1E1E1E</color>
+    <!--bv zhangjiachu add for bv theme style end-->
+</resources>

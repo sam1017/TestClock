@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!--/*bv zhangjiachu add for alarm style 20200309 start*/-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Left gutter. -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/gutter_width_percent" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/guttered_content_width_percent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!--<ImageView
+                android:id="@+id/world_clock_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/world_clock_map" />-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="301dp"
+                android:gravity="center">
+
+                <com.android.deskclock.AnalogClock
+                    android:id="@+id/bv_analog_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/bv_digital_clock_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+                    <com.android.deskclock.widget.AutoSizingTextClock
+                        android:id="@+id/bv_digital_clock"
+                        style="@style/bv_digital_clock_large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:includeFontPadding="false"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--bv zhangjiachu add android:visibility="gone" 隐藏时钟-->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="-15dp"
+                android:visibility="gone">
+
+                <com.android.deskclock.AnalogClock
+                    android:id="@+id/analog_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/analog_clock_margin"
+                    android:layout_marginLeft="@dimen/analog_clock_margin"
+                    android:layout_marginRight="@dimen/analog_clock_margin"
+                    android:layout_marginStart="@dimen/analog_clock_margin"
+                    android:layout_marginTop="@dimen/circle_margin_top" />
+
+                <!-- bv zhangjiachu modify @dimen/main_clock_digital_font_size" to
+                @dimen/bv_main_clock_digital_font_size"/>-->
+                <!--android:paddingTop="@dimen/bv_main_clock_digital_padding"-->
+                <com.android.deskclock.widget.AutoSizingTextClock
+                    android:id="@+id/digital_clock"
+                    style="@style/bv_display_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="none"
+                    android:includeFontPadding="false"
+                    android:singleLine="true" />
+
+            </FrameLayout>
+
+            <include layout="@layout/bv_date_and_next_alarm_time"/>
+
+            <!--bv zhangjiachu del : android:layout_marginTop="24dp" 20200302-->
+            <View
+                android:id="@+id/hairline"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hairline_height"
+                android:background="@color/hairline" />
+        </LinearLayout>
+
+        <!-- Right gutter. -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/gutter_width_percent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_worldclock"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:gravity="center"
+        android:visibility="gone">
+        <TextView
+            style="@style/no_alarms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_world_clock"
+            android:textColor="@color/no_alarms"/>
+    </LinearLayout>
+
+</LinearLayout>
+<!--/*bv zhangjiachu add for alarm style 20200309 end*/-->

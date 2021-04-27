@@ -1,0 +1,5 @@
+<vector android:height="30dp" android:viewportHeight="60"
+    android:viewportWidth="60" android:width="30dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/colorTabAlarms"
+        android:pathData="m35 13.01c-0.26 0 -0.53 0.1 -0.73 0.31l-15.25 15.27c-0.2 0.2 -0.31 0.47 -0.31 0.74c-0.13 0.36 -0.05 0.79 0.24 1.08l15.19 15.22c0.2 0.2 0.47 0.31 0.73 0.31c0.25 0 0.51 -0.1 0.7 -0.29l0.71 -0.71c0.39 -0.39 0.38 -1.03 -0.02 -1.43l-13.94 -13.97l14.07 -14.09c0.4 -0.4 0.41 -1.04 0.02 -1.44l-0.71 -0.71c-0.19 -0.19 -0.45 -0.29 -0.7 -0.29z"/>
+</vector>
